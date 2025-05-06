@@ -7,32 +7,48 @@ const sliderContainer = document.querySelector('.bandeira'); // A div que deve s
 const logoImg = document.querySelector('.logo img'); // Logo
 const tituloBranco = document.querySelector('.branco');
 const subtituloBranco = document.querySelector('.subtitulo-branco');
-const menuIcone = document.querySelector('span')
+const menuIcones = document.querySelectorAll('.menu-toggle .line-menu');
+
+
 
 // Função para verificar a visibilidade total da div
 function checkVisibility() {
   const rect = sliderContainer.getBoundingClientRect();
 
-  // Verifica se a div saiu completamente da tela
   if (rect.bottom <= 0 || rect.top >= window.innerHeight) {
-    // Quando a div sair completamente da tela, adiciona a classe scrolled
+    // Header fixo com fundo claro
     document.querySelector('header.navbar').classList.add('scrolled');
-    
-    // Muda a logo
-    logoImg.src = "imagens/logo-colorida.png"; // Nova logo (escura)
+    logoImg.src = "imagens/logo-colorida.png";
     tituloBranco.style.color = "#08376d";
     subtituloBranco.style.color = "#08376d";
+    menuIcones.forEach(span => {
+      span.style.background = '#08376d';
+    });
+
+    // Links: hover azul
+    menuLinks.forEach(link => {
+      link.classList.remove('hover-white');
+      link.classList.add('hover-blue');
+    });
+
   } else {
-    // Quando a div ainda estiver visível, remove a classe scrolled
+    // Header transparente sobre o banner
     document.querySelector('header.navbar').classList.remove('scrolled');
-    
-    // Volta a logo original
-    logoImg.src = "imagens/logo-sem-fundo.png"; // Logo original (clara)
+    logoImg.src = "imagens/logo-sem-fundo.png";
     tituloBranco.style.color = "white";
     subtituloBranco.style.color = "white";
-    menuIcone.style.background = 'white'
-    
+    menuIcones.forEach(span => {
+      span.style.background = 'white';
+    });
+
+    // Links: hover branco
+    menuLinks.forEach(link => {
+      link.classList.remove('hover-blue');
+      link.classList.add('hover-white');
+    });
   }
+
+
 }
 
 // Abre o menu ao clicar no botão hamburger

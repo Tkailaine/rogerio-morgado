@@ -193,7 +193,7 @@ nav.menu .close-btn {
     left: -100%;
     height: 100vh;
     width: 100%;
-    background: rgba(157, 189, 247, 0.95);
+    background: rgba(5, 5, 5, 0.95);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -245,6 +245,24 @@ nav.menu .close-btn {
   }
 }
 
+
+/* Hover quando sobre o banner */
+nav.menu ul li a.hover-white:hover {
+  color: white;
+}
+
+nav.menu ul li a.hover-white:hover::after {
+  background: white;
+}
+
+/* Hover quando saiu do banner */
+nav.menu ul li a.hover-blue:hover {
+  color: #08376d;
+}
+
+nav.menu ul li a.hover-blue:hover::after {
+  background: #08376d;
+}
 
   /* Seções principais */
   main .section {
