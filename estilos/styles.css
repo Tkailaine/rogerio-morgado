@@ -566,9 +566,12 @@ nav.menu .close-btn {
 }
 
 .foto-advocacia{
-  width: 400px;
+  width: 450px;
   height: 300px;
-  background-color: #0b5eb1bb;
+  background-image: url(../imagens/decoracao.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .formulario{
   width:80%;
