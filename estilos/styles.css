@@ -404,6 +404,7 @@ nav.menu ul li a.hover-blue:hover::after {
   width: 100%;
   height: 1100px;
 
+
 }
 .atuacoes h1{
   position: absolute;
@@ -413,7 +414,6 @@ nav.menu ul li a.hover-blue:hover::after {
   width: 95%;
   margin: auto;
   font-size: 15vw;
-
   text-align: center;
   color:#80c0ff36;
 }
@@ -426,9 +426,10 @@ nav.menu ul li a.hover-blue:hover::after {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   gap: 50px;
   width: 60%;
+  
 
 }
 
@@ -438,6 +439,8 @@ nav.menu ul li a.hover-blue:hover::after {
   width: 100%;
   margin-top: 10px;
 }
+
+
 
 .header-card-atuacao{
   display: flex;
