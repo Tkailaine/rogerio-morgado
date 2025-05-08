@@ -15,6 +15,31 @@
   .text-container p{
     font-size: 1em;
   }
+
+  .atuacoes{
+    height: 1250px;
+
+  }
+
+  .escritorio{
+    width: 80%;
+  }
+
+  .decoration-escritorio{
+   width: 300px;
+    height: 350px;
+ 
+  }
+  
+  .ft-escritorio{
+
+    left: 10%;
+    top: 10%;
+    width: 93%;
+    height: 95%;
+
+  
+  }
   
 
 

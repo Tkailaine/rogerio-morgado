@@ -98,6 +98,7 @@ header .container {
 
 nav.menu .close-btn {
   display: block;
+ 
 }
 
 nav.menu {
@@ -118,6 +119,7 @@ nav.menu ul li a {
   position: relative;
 }
 
+
 nav.menu ul li a::after {
   content: "";
   position: absolute;
@@ -125,7 +127,7 @@ nav.menu ul li a::after {
   bottom: -5px;
   width: 0%;
   height: 2px;
-  background: #08376d;
+  background: #ffffff;
   transition: width 0.3s ease;
 }
 
@@ -181,8 +183,28 @@ nav.menu .close-btn {
   z-index: 1001;
 }
 
+.mobile-logo {
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  z-index: 1002;
+  transform: translate(-50%, -20%);
+}
+
+.mobile-logo img {
+  width: 170px;
+  height: auto;
+}
+
+
 /* Responsividade */
 @media (max-width: 768px) {
+
+  .mobile-logo {
+    display: block;
+  }
+
   .menu-toggle {
     display: flex;
   }
@@ -207,13 +229,16 @@ nav.menu .close-btn {
   nav.menu ul {
     flex-direction: column;
     gap: 20px;
+    margin-top: 100px; 
   }
 
   nav.menu ul li {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeIn 0.5s ease forwards;
+    
   }
+  
 
   nav.menu ul li:nth-child(1) {
     animation-delay: 0.3s;
@@ -234,6 +259,8 @@ nav.menu .close-btn {
   /* Mostrar o botão de fechar no menu ativo */
   nav.menu .close-btn {
     display: block;
+    top: 20px;
+    right: 20px;
   }
 }
 
@@ -375,7 +402,7 @@ nav.menu ul li a.hover-blue:hover::after {
 .atuacoes{
   position: relative;
   width: 100%;
-  height: 800px;
+  height: 1100px;
 
 }
 .atuacoes h1{
@@ -418,6 +445,10 @@ nav.menu ul li a.hover-blue:hover::after {
   gap: 10px;
 }
 
+.card-atuacao h2{
+  font-size: 1.3em;
+}
+
 .icone{
   width: 60px;
   height: 60px;
@@ -444,6 +475,10 @@ nav.menu ul li a.hover-blue:hover::after {
 
 .icone3{
   background-image: url(../imagens/previdenciario.png);
+}
+
+.icone4{
+  background-image: url(../imagens/trabalho.png);
 }
 
 .sessao-atuacoes{

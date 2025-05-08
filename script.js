@@ -2,34 +2,36 @@
 const menuToggle = document.getElementById('menuToggle');
 const closeMenu = document.getElementById('closeMenu');
 const menu = document.getElementById('menu');
-const menuLinks = document.querySelectorAll('nav.menu ul li a'); // Seleciona todos os links no menu
-const sliderContainer = document.querySelector('.bandeira'); // A div que deve ser observada
-const logoImg = document.querySelector('.logo img'); // Logo
+const menuLinks = document.querySelectorAll('nav.menu ul li a');
+const sliderContainer = document.querySelector('.bandeira');
+const logoImg = document.querySelector('.logo img');
 const tituloBranco = document.querySelector('.branco');
 const subtituloBranco = document.querySelector('.subtitulo-branco');
 const menuIcones = document.querySelectorAll('.menu-toggle .line-menu');
 
-
-
-// Função para verificar a visibilidade total da div
+// Função para verificar a visibilidade da seção
 function checkVisibility() {
   const rect = sliderContainer.getBoundingClientRect();
+  const isSmallScreen = window.innerWidth <= 768;
 
   if (rect.bottom <= 0 || rect.top >= window.innerHeight) {
-    // Header fixo com fundo claro
+    // Header com fundo claro
     document.querySelector('header.navbar').classList.add('scrolled');
     logoImg.src = "imagens/logo-colorida.png";
-    tituloBranco.style.color = "#08376d";
-    subtituloBranco.style.color = "#08376d";
+    tituloBranco.style.color = "black";
+    subtituloBranco.style.color = "black";
     menuIcones.forEach(span => {
       span.style.background = '#08376d';
     });
 
-    // Links: hover azul
-    menuLinks.forEach(link => {
-      link.classList.remove('hover-white');
-      link.classList.add('hover-blue');
-    });
+    if (!isSmallScreen) {
+      // Apenas em telas grandes, altera a cor dos links
+      menuLinks.forEach(link => {
+        link.classList.remove('hover-white');
+        link.classList.add('hover-blue');
+        link.style.color = "#08376d";
+      });
+    }
 
   } else {
     // Header transparente sobre o banner
@@ -41,99 +43,48 @@ function checkVisibility() {
       span.style.background = 'white';
     });
 
-    // Links: hover branco
-    menuLinks.forEach(link => {
-      link.classList.remove('hover-blue');
-      link.classList.add('hover-white');
-    });
+    if (!isSmallScreen) {
+      // Apenas em telas grandes, altera a cor dos links
+      menuLinks.forEach(link => {
+        link.classList.remove('hover-blue');
+        link.classList.add('hover-white');
+        link.style.color = "white";
+      });
+    }
   }
 
-
+  // Em telas pequenas, mantém os links sempre brancos
+  if (isSmallScreen) {
+    menuLinks.forEach(link => {
+      link.style.color = "white";
+    });
+  }
 }
 
-// Abre o menu ao clicar no botão hamburger
+// Abre o menu
 menuToggle.addEventListener('click', () => {
   menu.classList.add('active');
 });
 
-// Fecha o menu ao clicar no botão de fechar
+// Fecha o menu
 closeMenu.addEventListener('click', () => {
   menu.classList.remove('active');
 });
 
-// Fecha o menu ao clicar em um link de navegação (quando em telas pequenas)
+// Fecha ao clicar em um link
 menuLinks.forEach(link => {
   link.addEventListener('click', () => {
     menu.classList.remove('active');
   });
 });
 
-// Chama a função sempre que o usuário rolar a página
+// Atualiza ao rolar
 window.addEventListener('scroll', checkVisibility);
 
-// Chama a função assim que a página carregar
+// Atualiza ao carregar
 document.addEventListener('DOMContentLoaded', checkVisibility);
 
 
-
-//BANDEIRA SLIDER
-let currentIndex = 0;
-const slides = document.querySelectorAll('.slider-container .slide');
-const prevButton = document.querySelector('.slider-container .prev');
-const nextButton = document.querySelector('.slider-container .next');
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) {
-            slide.classList.add('active');
-        }
-    });
-}
-
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-}
-
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    showSlide(currentIndex);
-}
-
-nextButton.addEventListener('click', nextSlide);
-prevButton.addEventListener('click', prevSlide);
-
-// Automatização do slide a cada 5 segundos
-setInterval(nextSlide, 5000);
-
-
-
-
-
-
-function toggleArea(id) {
-  const card = document.getElementById(id);
-  const detalhes = card.querySelector('.detalhes');
-  const miniResumo = card.querySelector('.mini-resumo');
-  const btnExpand = card.querySelector('.btn-expand');
-  const btnCollapse = card.querySelector('.btn-collapse');
-
-  // Alterna a exibição dos detalhes e do resumo
-  if (detalhes.style.display === 'block') {
-    detalhes.style.display = 'none';
-    miniResumo.style.display = 'block';
-    btnExpand.style.display = 'inline-block';
-    btnCollapse.style.display = 'none';
-    card.style.height = 'auto';
-  } else {
-    detalhes.style.display = 'block';
-    miniResumo.style.display = 'none';
-    btnExpand.style.display = 'none';
-    btnCollapse.style.display = 'inline-block';
-    card.style.height = 'auto';
-  }
-}
 
 
 
@@ -155,11 +106,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
-
-
-
-
-
 
 
 

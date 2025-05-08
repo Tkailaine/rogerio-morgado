@@ -17,6 +17,11 @@
   margin-top: 20px;
 }
 
+.atuacoes{
+  height: 900px;
+
+}
+
 .box-card{
   flex-direction: row;
   gap: 0px;
