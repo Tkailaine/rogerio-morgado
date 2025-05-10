@@ -457,13 +457,25 @@ li{
     }
 }
 
-
-
-.assinatura{
-  margin-top: 30px;
+.portal-destaque{
+  padding: 5px;
+  border: 2px solid;
+  border-radius: 5px;
 }
 
-.assinatura p{
-    text-align: left;
-    
+.destaque{
+  display: block;
+  width: 280px;
+  text-decoration: none;
+  color: #08376d;
+  border: 2px solid #08376d;
+  border-radius: 5px;
+  padding: 5px;
+  transition: transform 0.3s ease-in-out;
+  margin: auto;
+}
+
+.destaque:hover{
+  transform: scale(1.1);
+  font-weight: 500;
 }
