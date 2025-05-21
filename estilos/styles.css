@@ -23,7 +23,7 @@
   }
   
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     color: #333;
     scroll-behavior: smooth;
   }
@@ -36,7 +36,7 @@
  
 
  h1{
-    font-family: var(--fonte-destaque);
+   font-family: 'Segoe UI', sans-serif;
   }
   header{
     width: 92%;
@@ -836,7 +836,7 @@ nav.menu ul li a.hover-blue:hover::after {
 footer{
   background-color: rgb(246, 246, 247);
   padding: 40px 0px;
-  font-family: var(--fonte-destaque);
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .sessao-footer{
