@@ -18,7 +18,7 @@
 }
 /* Estilo global */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background: #f4f4f4;
     color: #333;
     margin: 0;
@@ -186,7 +186,7 @@ z-index: 1001;
 
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
 
   .mobile-logo {
     display: block;
@@ -262,7 +262,7 @@ z-index: 1001;
 
 .portal-destaque{
   padding: 5px;
-  border: 2px solid;
+  border: 2px solid white;
   border-radius: 5px;
 }
 
@@ -273,7 +273,7 @@ z-index: 1001;
   }
 /* Títulos */
 main h1 {
-    font-family: var(--fonte-destaque);
+    font-family: 'Segoe UI', sans-serif;
     font-size: 2.5rem;
     font-weight: 200;
     color: #08376d;
@@ -282,7 +282,7 @@ main h1 {
 }
 
 h2 {
-    font-family: var(--fonte-normal);
+    font-family: 'Segoe UI', sans-serif;
     font-size: 1.6rem;
     color: #08376d;
     margin-top: 50px;
@@ -494,7 +494,7 @@ a{
 }
 
 .box-valor h2{
-  font-family: var(--fonte-destaque);
+  font-family: 'Segoe UI', sans-serif;
   text-align: center;
   margin: 0;
   font-weight: 400;

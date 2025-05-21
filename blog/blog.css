@@ -1,6 +1,6 @@
 /* Estilo global */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background: #f4f4f4;
     color: #333;
     margin: 0;
@@ -167,7 +167,7 @@ z-index: 1001;
 
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
 
   .mobile-logo {
     display: block;
@@ -249,7 +249,8 @@ z-index: 1001;
   border-radius: 10px;
   width: 100px;
   height: 35px;
-  font-family: var(--fonte-destaque);
+        font-family: 'Segoe UI', sans-serif;
+
   cursor: pointer;
   display: block;
   margin: 0px;
@@ -270,7 +271,7 @@ z-index: 1001;
   }
 /* Títulos */
 h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     font-size: 2.5rem;
     color: #08376d;
     text-align: left;
@@ -278,7 +279,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     font-size: 1.6rem;
     color: #08376d;
     margin-top: 40px;
