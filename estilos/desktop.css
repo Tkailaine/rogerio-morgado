@@ -22,14 +22,12 @@
 
 }
 
-
 .card-atuacao{
-  width: 22%;
+  width: 70%;
+  margin: 20px 0;
 }
 
-
 .box-card{
-  flex-direction: row;
   align-items: baseline;
   gap: 0px;
   width: 82%;
