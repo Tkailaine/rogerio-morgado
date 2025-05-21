@@ -22,15 +22,25 @@
 
 }
 
-.box-card{
-  flex-direction: row;
-  gap: 0px;
-  width: 90%;
 
+.card-atuacao{
+  width: 22%;
 }
 
+
+.box-card{
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0px;
+  width: 82%;
+
+ 
+}
+
+
+
 .box-card p{
-  width: 90%;
+  width: 100%;
 }
 
 

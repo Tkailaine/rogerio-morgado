@@ -23,18 +23,23 @@
 
 }
 
+.card-atuacao{
+  width: 22%;
+}
+
 
 .box-card{
   flex-direction: row;
+  align-items: baseline;
   gap: 0px;
-  width: 90%;
+  width: 82%;
  margin-left: 50px;
  
  
 }
 
 .box-card p{
-  width: 70%;
+  width: 100%;
 }
 
 
