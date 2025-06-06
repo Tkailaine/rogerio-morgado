@@ -1,91 +1,109 @@
-/// Seleciona os elementos
+// Seleciona os elementos
 const menuToggle = document.getElementById('menuToggle');
 const closeMenu = document.getElementById('closeMenu');
 const menu = document.getElementById('menu');
 const menuLinks = document.querySelectorAll('nav.menu ul li a');
+const portalDestaque = document.querySelector('.portal-destaque');
 const sliderContainer = document.querySelector('.bandeira');
 const logoImg = document.querySelector('.logo img');
 const tituloBranco = document.querySelector('.branco');
 const subtituloBranco = document.querySelector('.subtitulo-branco');
 const menuIcones = document.querySelectorAll('.menu-toggle .line-menu');
+const navbar = document.querySelector('header.navbar');
 
-// Função para verificar a visibilidade da seção
+// Função de visibilidade
 function checkVisibility() {
   const rect = sliderContainer.getBoundingClientRect();
-  const isSmallScreen = window.innerWidth <= 768;
+  const isMobile = window.innerWidth <= 1100;
 
-  if (rect.bottom <= 0 || rect.top >= window.innerHeight) {
-    // Header com fundo claro
-    document.querySelector('header.navbar').classList.add('scrolled');
-    logoImg.src = "imagens/logo-colorida.png";
-    tituloBranco.style.color = "black";
-    subtituloBranco.style.color = "black";
-    menuIcones.forEach(span => {
-      span.style.background = '#08376d';
+  if (isMobile) {
+    // MOBILE: mantém tudo branco sobre fundo preto
+    menuLinks.forEach(link => {
+      link.style.color = 'white';
+      link.classList.remove('hover-blue');
+      link.classList.remove('hover-white');
     });
 
-    if (!isSmallScreen) {
-      // Apenas em telas grandes, altera a cor dos links
-      menuLinks.forEach(link => {
-        link.classList.remove('hover-white');
-        link.classList.add('hover-blue');
-        link.style.color = "#08376d";
-      });
-    }
-
-  } else {
-    // Header transparente sobre o banner
-    document.querySelector('header.navbar').classList.remove('scrolled');
-    logoImg.src = "imagens/logo-sem-fundo.png";
-    tituloBranco.style.color = "white";
-    subtituloBranco.style.color = "white";
     menuIcones.forEach(span => {
       span.style.background = 'white';
     });
 
-    if (!isSmallScreen) {
-      // Apenas em telas grandes, altera a cor dos links
-      menuLinks.forEach(link => {
-        link.classList.remove('hover-blue');
-        link.classList.add('hover-white');
-        link.style.color = "white";
-      });
+    if (portalDestaque) {
+      portalDestaque.style.color = 'white';
+      portalDestaque.style.border = '2px solid white';
     }
+
+    // Garante que navbar continue com gradiente azul original
+    navbar.classList.remove('scrolled');
+    navbar.style.backgroundImage = ''; // deixa o CSS controlar o gradiente
+    logoImg.src = "../imagens/logo-sem-fundo.png";
+    return;
   }
 
-  // Em telas pequenas, mantém os links sempre brancos
-  if (isSmallScreen) {
-    menuLinks.forEach(link => {
-      link.style.color = "white";
+  // DESKTOP
+  if (rect.bottom <= 0 || rect.top >= window.innerHeight) {
+    // Scrolled: branco
+    navbar.classList.add('scrolled');
+    logoImg.src = "../imagens/logo-colorida.png";
+    tituloBranco && (tituloBranco.style.color = 'black');
+    subtituloBranco && (subtituloBranco.style.color = 'black');
+
+    menuIcones.forEach(span => {
+      span.style.background = '#08376d';
     });
+
+    menuLinks.forEach(link => {
+      link.style.color = '#08376d';
+      link.classList.remove('hover-white');
+      link.classList.add('hover-blue');
+    });
+
+    if (portalDestaque) {
+      portalDestaque.style.color = '#08376d';
+      portalDestaque.style.border = '2px solid #08376d';
+    }
+
+  } else {
+    // Antes da rolagem: azul
+    navbar.classList.remove('scrolled');
+    logoImg.src = "../imagens/logo-sem-fundo.png";
+    tituloBranco && (tituloBranco.style.color = 'white');
+    subtituloBranco && (subtituloBranco.style.color = 'white');
+
+    menuIcones.forEach(span => {
+      span.style.background = 'white';
+    });
+
+    menuLinks.forEach(link => {
+      link.style.color = 'white';
+      link.classList.remove('hover-blue');
+      link.classList.add('hover-white');
+    });
+
+    if (portalDestaque) {
+      portalDestaque.style.color = 'white';
+      portalDestaque.style.border = '2px solid white';
+    }
   }
 }
 
-// Abre o menu
+// Menu mobile
 menuToggle.addEventListener('click', () => {
   menu.classList.add('active');
 });
-
-// Fecha o menu
 closeMenu.addEventListener('click', () => {
   menu.classList.remove('active');
 });
-
-// Fecha ao clicar em um link
 menuLinks.forEach(link => {
   link.addEventListener('click', () => {
     menu.classList.remove('active');
   });
 });
 
-// Atualiza ao rolar
+// Eventos
 window.addEventListener('scroll', checkVisibility);
-
-// Atualiza ao carregar
+window.addEventListener('resize', checkVisibility);
 document.addEventListener('DOMContentLoaded', checkVisibility);
-
-
-
 
 
 

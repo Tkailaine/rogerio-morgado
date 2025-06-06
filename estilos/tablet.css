@@ -1,7 +1,4 @@
 @charset "UTF-8";
-.logo h1{
-  font-size: 1.2em;
-}
 
 .txt-bandeira h1{
   font-size: 1.2em;
@@ -37,10 +34,6 @@
 
 }
 
-nav.menu ul {
-  gap: 20px;
-}
-
 
 .text-container h2{
   font-size: 2.6em;
@@ -50,10 +43,4 @@ nav.menu ul {
   font-size: 1.3em;
 }
 
-  .links-uteis > li{
-    font-size: 1.2em;
-    margin: 20px 0px;
-  }
-  
-  
  

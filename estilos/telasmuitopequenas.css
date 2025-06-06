@@ -1,11 +1,12 @@
 @charset "UTF-8";
 
-.logo img{
-    width: 70px;
+.bandeira{
+  margin: 150px auto 0;
+  background-position: 70%, 50%;
 }
-
 .text-container{
   width: 80%;
+  margin: auto;
 }
 
 .text-container h2{
@@ -17,7 +18,9 @@
   }
 
   .atuacoes{
+    margin: 60px auto;
     height: 1250px;
+
 
   }
 
