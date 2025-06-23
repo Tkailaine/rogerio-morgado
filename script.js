@@ -36,7 +36,7 @@ function checkVisibility() {
     // Garante que navbar continue com gradiente azul original
     navbar.classList.remove('scrolled');
     navbar.style.backgroundImage = ''; // deixa o CSS controlar o gradiente
-    logoImg.src = "../imagens/logo-sem-fundo.png";
+    logoImg.src = "imagens/logo-sem-fundo.png";
     return;
   }
 
@@ -44,7 +44,7 @@ function checkVisibility() {
   if (rect.bottom <= 0 || rect.top >= window.innerHeight) {
     // Scrolled: branco
     navbar.classList.add('scrolled');
-    logoImg.src = "../imagens/logo-colorida.png";
+    logoImg.src = "imagens/logo-colorida.png";
     tituloBranco && (tituloBranco.style.color = 'black');
     subtituloBranco && (subtituloBranco.style.color = 'black');
 
@@ -66,7 +66,7 @@ function checkVisibility() {
   } else {
     // Antes da rolagem: azul
     navbar.classList.remove('scrolled');
-    logoImg.src = "../imagens/logo-sem-fundo.png";
+    logoImg.src = "imagens/logo-sem-fundo.png";
     tituloBranco && (tituloBranco.style.color = 'white');
     subtituloBranco && (subtituloBranco.style.color = 'white');
 
