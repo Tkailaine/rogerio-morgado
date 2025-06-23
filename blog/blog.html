@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informativos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="../estilos/menu.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+
+      @charset "UTF-8";
+
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+      :root{
+        --cor1:#002447;
+        --cor2:#001932;
+        --cor3:#bfdfff;
+        --cor4:#80c0ff;
+        --cor5:#ffffff;
+
+        --fonte-destaque: Quicksand, sans-serif;
+        --fonte-normal: Poppins, sans-serif;
+      }
+            /* Estilo global */
+      body {
+          font-family: 'Segoe UI', sans-serif;
+          background: #f4f4f4;
+          color: #033b7a;
+          margin: 0;
+          padding-top: 80px;
+      }
+
+
+
+        .btn-whatsapp{
+          border: 2px solid #ffffff;
+          background-color: transparent;
+          color: var(--cor1);
+          border-radius: 10px;
+          width: 100px;
+          height: 35px;
+        font-family: 'Segoe UI', sans-serif;
+          cursor: pointer;
+          display: block;
+          margin: 0px;
+          font-weight: 600;
+
+        }
+
+        .btn-whatsapp:hover{
+          background-color: var(--cor1);
+          transition-duration: 1s;
+          color: white;
+        }
+        
+
+        .container {
+                  max-width: 1200px;
+                  margin: 70px auto;
+              }
+              .blog {
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 20px;
+                  justify-content: center;
+              }
+              .card-blog {
+                  width: 300px;
+                  background: white;
+                  border-radius: 10px;
+                  overflow: hidden;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                  transition: transform 0.3s;
+              }
+              .card-blog:hover {
+                  transform: scale(1.05);
+              }
+              .card-blog img {
+                  width: 100%;
+                  height: 180px;
+                  object-fit: cover;
+              }
+              .news-content {
+                  padding: 15px;
+              }
+              .news-meta {
+                  font-size: 12px;
+                  color: #777;
+              }
+              .news-title {
+                  font-size: 18px;
+                  margin: 10px 0;
+              }
+              .news-summary {
+                  font-size: 14px;
+                  color: #555;
+              }
+              .news-link {
+                  display: inline-block;
+                  margin-top: 10px;
+                  color: #08376d;
+                  text-decoration: none;
+                  font-weight: bold;
+              }
+              .news-link:hover {
+                  text-decoration: underline;
+              }
+              @media (max-width: 768px) {
+                  .blog {
+                      flex-direction: column;
+                      align-items: center;
+                  }
+              }
+              a{
+                text-decoration: none;
+              }
+              .branco, .subtitulo-branco{
+                color: white;
+              }
+
+           
+    </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="../index.html">
+        <div class="logo">
+        <img src="../imagens/logo-sem-fundo.png" alt="Rogério Morgado ">
+    </div>
+      </a>
+      <button class="menu-toggle" id="menuToggle">
+        <span class="line-menu"></span>
+        <span class="line-menu" style="width: 20px; margin-left: 5px;"></span>
+        <span class="line-menu"></span>
+      </button>
+      
+      <nav class="menu" id="menu">
+         <!-- Nova logo para menu mobile -->
+         <div class="mobile-logo">
+          <img src="../imagens/logo-branco.png" alt="Logo Menu Mobile">
+        </div>
+
+        <ul style="gap: 0px;">
+          <li><a href="../index.html">INÍCIO</a></li>
+          <li><a href="../paginas/atuacao.html">ÁREAS DE ATUAÇÃO</a></li>
+          <li><a href="../paginas/sobre.html">SOBRE</a></li>
+          <li><a href="#">INFORMATIVOS</a></li>
+          <li><a href="https://ww2.trt2.jus.br/" target="_blank" class="portal-destaque">PORTAL DE NOTÍCIAS</a></li>
+         
+        </ul>
+        <button class="close-btn" id="closeMenu">&times;</button>
+      </nav>
+    
+    </div>
+  </header>
+
+<div class="container">
+  <h1 style="text-align:center; margin-bottom:20px;">Todas as Notícias</h1>
+  <div class="blog" id="newsContainer">
+      <!-- Os cards serão adicionados aqui dinamicamente -->
+  </div>
+</div>
+    
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    console.log("JavaScript carregado com sucesso!");
+
+    const menuToggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("menu");
+    const closeMenu = document.getElementById("closeMenu");
+    const menuLinks = document.querySelectorAll("#menu a");
+
+    if (menuToggle && menu) {
+        menuToggle.addEventListener("click", () => {
+            console.log("Menu aberto");
+            menu.classList.add("active");
+        });
+    } else {
+        console.error("Erro: Elementos do menu não encontrados!");
+    }
+
+    if (closeMenu && menu) {
+        closeMenu.addEventListener("click", () => {
+            console.log("Menu fechado");
+            menu.classList.remove("active");
+        });
+    }
+
+    if (menuLinks.length > 0 && menu) {
+        menuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                console.log("Menu fechado ao clicar em um link");
+                menu.classList.remove("active");
+            });
+        });
+    }
+
+
+
+
+
+    // Evento de rolagem para verificar visibilidade (caso necessário)
+    if (typeof checkVisibility === "function") {
+        window.addEventListener("scroll", checkVisibility);
+        checkVisibility(); // Executa assim que a página carregar
+    } else {
+        console.warn("Função checkVisibility não encontrada.");
+    }
+
+});
+
+//cards
+const newsData = [
+            { img: "imagens/1.jpg", fonte: "Rogério Morgado", data: "02/05/2025", titulo: "DIFERENÇA ENTRE ACIDENTE DO TRABALHO E DOENÇA OCUPACIONAL", resumo: "Você sabe o que realmente diferencia um acidente de trabalho de uma doença ocupacional? Entenda os impactos legais .", link: "1.html" },
+            { img: "imagens/2.jpg", fonte: "Rogério Morgado", data: "02/05/2025", titulo: "ACIDENTE DE PERCURSO PODE OU NÃO TER DIREITO A INDENIZAÇÃO", resumo: "Foi vítima de um acidente a caminho do trabalho? Nem sempre há direito à indenização, mas em muitos casos, sim. Descubra se você tem direito.", link: "2.html" },
+            { img: "imagens/3.jpg", fonte: "Rogério Morgado", data: "02/05/2025", titulo: "QUEM TEM DIREITO A ESTABILIDADE PROVISÓRIA", resumo: "A estabilidade provisória é um direito pouco conhecido, mas pode fazer toda a diferença em momentos delicados.", link: "3.html" }
+        ];
+
+        // Ordena as notícias por data (mais recente primeiro)
+        newsData.sort((a, b) => {
+            const dateA = new Date(a.data.split("/").reverse().join("-"));
+            const dateB = new Date(b.data.split("/").reverse().join("-"));
+            return dateB - dateA;
+        });
+
+        const newsContainer = document.getElementById("newsContainer");
+
+        newsData.forEach(news => {
+            const card = document.createElement("div");
+            card.classList.add("card-blog");
+            card.innerHTML = `
+                <img src="${news.img}" alt="${news.titulo}">
+                <div class="news-content">
+                    <p class="news-meta">Fonte: ${news.fonte} | Data: ${news.data}</p>
+                    <h2 class="news-title">${news.titulo}</h2>
+                    <p class="news-summary">${news.resumo}</p>
+                    <a href="${news.link}" class="news-link">Leia mais</a>
+                </div>
+            `;
+            newsContainer.appendChild(card);
+        });
+  
+    </script>
+    
+ <div class="social-buttons">
+      <!-- Instagram Button -->
+      <a href="" target="_blank" class="social-button instagram-button" aria-label="Follow us on Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+  
+      <!-- WhatsApp Button -->
+      <a href="" target="_blank" class="social-button whatsapp-button" aria-label="Contact us on WhatsApp">
+          <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+      </a>
+  
+    
+  </div>
+    
+</body>
+</html>

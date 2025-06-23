@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+.bandeira{
+  margin: 150px auto 0;
+  background-position: 70%, 50%;
+}
+.text-container{
+  width: 80%;
+  margin: auto;
+}
+
+.text-container h2{
+    font-size: 1.5em;
+  }
+  
+  .text-container p{
+    font-size: 1em;
+  }
+
+  .atuacoes{
+    margin: 60px auto;
+    height: 1250px;
+
+
+  }
+
+  .escritorio{
+    width: 80%;
+  }
+
+  .decoration-escritorio{
+   width: 300px;
+    height: 350px;
+ 
+  }
+  
+  .ft-escritorio{
+
+    left: 10%;
+    top: 10%;
+    width: 93%;
+    height: 95%;
+
+  
+  }
+  
+
+

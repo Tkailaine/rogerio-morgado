@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+
+
+.bandeira{
+  background-position: top;
+}
+
+.txt-bandeira h1{
+  font-size: 1.4em;
+  width: 100%;
+}
+
+.txt-bandeira button{
+  margin-top: 20px;
+}
+
+.atuacoes{
+  height: 900px;
+
+}
+
+.card-atuacao{
+  width: 70%;
+  margin: 20px 0;
+}
+
+.box-card{
+  align-items: baseline;
+  gap: 0px;
+  width: 82%;
+
+ 
+}
+
+
+
+.box-card p{
+  width: 100%;
+}
+
+
+
+.escritorio{
+  flex-direction: row;
+  gap: 0px;
+  background-attachment: fixed;
+
+}
+
+.decoration-escritorio{
+  width: 50%;
+
+}
+
+.txt-escritorio{
+  width: 40%;
+}
+
+
+
+
+
+.branco{
+  font-size: 1.7em;
+}
+.subtitulo-branco{
+  font-size: 1.2em;
+ 
+}
+
+.text-container h2{
+  font-size: 3em;
+}
+
+.text-container p{
+  font-size: 1.5em;
+}
+
+
+.conteudo-especializacoes{
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 0px;
+  padding: 80px 0px;
+  
+}
+
+.direcao{
+  flex-direction:row-reverse ;
+}
+
+.sessao-atuacoes{
+  position: relative;
+  height: 700px;
+}
+
+
+
+.redirecionamento-atuacoes{
+  width: 450px;
+  height: 450px;
+   position: absolute;
+   right:0%;
+   top: 55%;
+   transform: translate(-15%, -55%);
+
+   
+}
+
+.card-blog{
+  width: 300px;
+}
+
+.card-blog img {
+  height: 200px;
+
+}
+
+
+.box-atendimento-contato{
+  flex-direction: row;
+
+}
+
+.formulario{
+  width:30%;
+  
+}
+
+.contato-form h3{
+  text-align: left;
+
+}
+
+
+.form{
+  margin: 0;
+}

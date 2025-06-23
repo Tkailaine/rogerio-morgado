@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.txt-bandeira h1{
+  font-size: 1.2em;
+  width: 100%;
+}
+
+.txt-bandeira button{
+  margin-top: 20px;
+}
+
+
+.box-card{
+  width: auto;
+}
+
+
+
+
+.formulario{
+  width:55%;
+  
+}
+
+
+
+.card-blog{
+  width: 30%;
+  max-width: 300px;
+}
+
+.card-blog img {
+  height: 250px;
+
+}
+
+
+.text-container h2{
+  font-size: 2.6em;
+}
+
+.text-container p{
+  font-size: 1.3em;
+}
+
+ 

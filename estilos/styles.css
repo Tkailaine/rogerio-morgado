@@ -1,0 +1,534 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root{
+  --cor1:#002447;
+  --cor2:#001932;
+  --cor3:#bfdfff;
+  --cor4:#80c0ff;
+  --cor5:#ffffff;
+
+  --fonte-destaque: Quicksand, sans-serif;
+  --fonte-normal: Poppins, sans-serif;
+}
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+
+  a{
+    text-decoration: none;
+   
+  }
+
+ 
+
+ h1{
+   font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Seções principais */
+  main .section {
+    padding: 100px 20px;
+    text-align: center;
+    font-size: 2rem;
+    min-height: 100vh;
+  }
+
+/* TikTok Button */
+.tiktok-button {
+    background-color: #000;
+}
+
+.tiktok-button:hover {
+    background-color: #111;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.bandeira{
+  position: relative;
+  width: 90%;
+  height: 700px;
+  background-image: url(../imagens/bandeira2.jpg);
+  background-size: cover;
+  background-position: 60%;
+  background-repeat: no-repeat;
+  border-radius: 80px;
+  margin: 140px auto 50px;
+}
+
+.txt-bandeira{
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-5%, -50%);
+}
+
+.txt-bandeira h1{
+  display: block;
+  background-image: linear-gradient(45deg, #39515cb7, #003468bb);
+  padding: 15px;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.3em;
+  width: 50%;
+}
+
+.txt-bandeira button{
+  background-color: #0161ce;
+  color:white;
+  padding: 18px;
+  border-radius: 20px;
+  border: 2px solid #0161ce;
+  margin-top: 10px;
+}
+
+/*SESSÃO ATUAÇÕES*/
+
+.atuacoes{
+  position: relative;
+  width: 100%;
+  height: 1100px;
+ 
+
+
+}
+.atuacoes h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  margin: auto;
+  font-size: 15vw;
+  text-align: center;
+  color:#80c0ff18;
+}
+
+.box-card{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 80%;
+
+  
+
+}
+.box-card p{
+  line-height: 1.7em;
+  text-align: justify;
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+
+.header-card-atuacao{
+  display: flex;
+  align-items: center; 
+  gap: 10px;
+}
+
+.card-atuacao h2{
+  font-size: 1.3em;
+}
+
+.icone{
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  background-color: #0373e4bb;
+  border-radius: 12px;
+}
+
+.ft-icone{
+  width: 90%;
+  height: 90%;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+
+.icone1{
+  background-image: url(../imagens/civil.png);
+}
+
+.icone2{
+  background-image: url(../imagens/empresarial.png);
+}
+
+.icone3{
+  background-image: url(../imagens/previdenciario.png);
+}
+
+.icone4{
+  background-image: url(../imagens/trabalho.png);
+}
+
+.sessao-atuacoes{
+  margin: 80px 0;
+  width: 100%;
+}
+
+.escritorio{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  padding: 80px 0px 200px 0px;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(../imagens/banner4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  gap:50px;
+}
+
+
+.decoration-escritorio{
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background-color: var(--cor4);
+  border-radius: 35px;
+}
+
+.ft-escritorio{
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  width: 96%;
+  height: 96%;
+  background-image: url(../imagens/banner3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 35px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.103);
+  
+
+}
+
+.txt-escritorio{
+  width: 100%;
+ 
+}
+.btns{
+  display:flex ;
+}
+
+.escritorio button{
+  padding: 20px;
+  margin: 20px 20px 0px 0px;
+  cursor: pointer;
+  border-radius: 8px;  
+  border: 2px solid var(--cor4);
+}
+
+.btn-conheca{
+  background-color: var(--cor4);
+  color: white;
+}
+
+.btn-especialista{
+  background-color: transparent;
+}
+
+.btn-conheca:hover{
+  background-color: var(--cor1);
+  border: 2px solid var(--cor1);
+  transition-duration: 0.5s;
+}
+
+.btn-especialista:hover{
+  background-color: var(--cor4);
+  color: rgb(255, 255, 255);
+  transition-duration: 0.5s;
+}
+.redirecionamento-atuacoes{
+    width: 85%;
+    height: 450px;
+   background-color: #ffffff;
+   line-height: 2em;
+   
+}
+
+.txt-atuacoes{
+  margin-top: 90px;
+}
+
+.redirecionamento-atuacoes h1, .redirecionamento-atuacoes p, .redirecionamento-atuacoes button{
+ 
+  margin: 20px 40px;
+
+}
+
+.redirecionamento-atuacoes h1{
+  font-weight: 200;
+}
+
+.redirecionamento-atuacoes p {
+  text-align: justify;
+}
+
+.btn-principal{
+  background-color: transparent;
+  padding: 20px;
+  border: 2px solid #0161ce;
+  color: #0161ce;
+}
+
+
+.chamada-acao{
+ 
+  width: 100%;
+  height: 1000px;
+  background-color: white;
+}
+
+.atendimento-contato{
+  width: 100%;
+  padding: 50px 0px;
+}
+
+.box-atendimento-contato{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.foto-advocacia{
+  width: 450px;
+  height: 300px;
+  background-image: url(../imagens/decoracao.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.formulario{
+  width:80%;
+}
+
+.contato-form h3{
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--cor1);
+}
+
+.form {
+  margin: auto;
+  width: 85%;
+  font-size: 1.125rem;
+
+}
+
+.form label,
+.form input,
+.form textarea,
+.form button {
+  display: block;
+  width: 100%;
+}
+
+.form label {
+  color: black;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.form input,
+.form textarea {
+  font: inherit;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--cor1);
+  border-radius: 8px;
+  transition: border-color, box-shadow 0.2s;
+}
+
+.form textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.form input:hover,
+.form input:focus,
+.form textarea:hover,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--cor1);
+  box-shadow: 0 0 0 2px var(--cor1);
+}
+
+.form button {
+  display: block;
+  padding: 1rem;
+  background: var(--cor1);
+  color: #fff;
+  font: inherit;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.form button:hover,
+.form button:focus {
+  outline: none;
+  background: var(--cor2);
+}
+.sessao-blog{
+  position: relative;
+  background-color: #faf8f8;
+  width: 100%;
+  padding: 50px 0px;
+}
+
+.sessao-blog h1{
+  text-align: center;
+  color: #033b7a;
+  font-weight: lighter;
+  margin: 30px 0;
+ 
+  font-size: 2em;
+}
+
+.sessao-blog button{
+  position: absolute;
+ display: block;
+ right: 10%;
+ top: 97%;
+ transform: translate(-10% , -97%);
+}
+
+.blog {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card-blog {
+  width: 350px;
+  background: transparent;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.card-blog:hover {
+  transform: scale(1.05);
+}
+.card-blog img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+
+}
+.news-content {
+  padding: 15px;
+}
+.news-meta {
+  font-size: 12px;
+  color: #08376d;
+}
+.news-title {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #033b7a;
+}
+.news-summary {
+  font-size: 14px;
+  color: #414144;
+}
+.news-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0161ce;
+  text-decoration: none;
+  font-weight: bold;
+}
+.news-link:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .blog {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+
+/* Defina o estado inicial dos elementos */
+.surge-bottom {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Estado final ao entrar na visualização */
+.surge-bottom.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.surge-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.surge-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.surge-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 1s ease, transform 0.8s ease;
+}
+
+.surge-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.surge-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.surge-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
