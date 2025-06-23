@@ -202,6 +202,7 @@ nav.menu .close-btn {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeIn 0.5s ease forwards;
+    margin-top: 20px ;
   }
 
   nav.menu ul li:nth-child(1) { animation-delay: 0.3s; }
