@@ -10,10 +10,14 @@
 }
 
 
-.box-card{
-  width: auto;
+.txt-escritorio{
+  padding: 50px 0;
 }
 
+.box-card p, .txt-escritorio p{
+  font-size: 1.2em;
+
+}
 
 
 
@@ -43,4 +47,4 @@
   font-size: 1.3em;
 }
 
- 
+

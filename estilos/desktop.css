@@ -15,23 +15,12 @@
   margin-top: 20px;
 }
 
-.atuacoes{
-  height: 900px;
 
+
+.txt-escritorio{
+  padding: 80px 0;
 }
 
-.card-atuacao{
-  width: 70%;
-  margin: 20px 0;
-}
-
-.box-card{
-  align-items: baseline;
-  gap: 0px;
-  width: 82%;
-
- 
-}
 
 
 
@@ -40,22 +29,6 @@
 }
 
 
-
-.escritorio{
-  flex-direction: row;
-  gap: 0px;
-  background-attachment: fixed;
-
-}
-
-.decoration-escritorio{
-  width: 50%;
-
-}
-
-.txt-escritorio{
-  width: 40%;
-}
 
 
 
@@ -90,23 +63,9 @@
   flex-direction:row-reverse ;
 }
 
-.sessao-atuacoes{
-  position: relative;
-  height: 700px;
-}
 
 
 
-.redirecionamento-atuacoes{
-  width: 450px;
-  height: 450px;
-   position: absolute;
-   right:0%;
-   top: 55%;
-   transform: translate(-15%, -55%);
-
-   
-}
 
 .card-blog{
   width: 300px;

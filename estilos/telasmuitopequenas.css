@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .bandeira{
-  margin: 150px auto 0;
+  margin: 150px auto 50px;
   background-position: 70%, 50%;
 }
 .text-container{
@@ -13,36 +13,18 @@
     font-size: 1.5em;
   }
   
-  .text-container p{
+  .text-container p, .atuacoes p
+{
     font-size: 1em;
   }
 
-  .atuacoes{
-    margin: 60px auto;
-    height: 1250px;
+  .box-card p, .txt-escritorio p{
+  font-size: 1.1em;
 
+}
 
-  }
-
-  .escritorio{
-    width: 80%;
-  }
-
-  .decoration-escritorio{
-   width: 300px;
-    height: 350px;
- 
-  }
-  
-  .ft-escritorio{
-
-    left: 10%;
-    top: 10%;
-    width: 93%;
-    height: 95%;
-
-  
-  }
-  
+.txt-escritorio{
+  padding: 50px 0;
+}
 
 

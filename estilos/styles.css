@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
 :root{
@@ -12,14 +9,14 @@
   --cor4:#80c0ff;
   --cor5:#ffffff;
 
-  --fonte-destaque: Quicksand, sans-serif;
-  --fonte-normal: Poppins, sans-serif;
+
 }
 /* Reset básico */
 
 html, body{
   scroll-behavior: smooth;
 }
+
 
 * {
     margin: 0;
@@ -38,6 +35,14 @@ html, body{
    
   }
 
+  p{
+    line-height: 2em;
+
+  }
+
+  
+
+
  
 
  h1{
@@ -48,7 +53,7 @@ html, body{
   main .section {
     padding: 100px 20px;
     text-align: center;
-    font-size: 2rem;
+   
     min-height: 100vh;
   }
 
@@ -107,7 +112,7 @@ html, body{
 .atuacoes{
   position: relative;
   width: 100%;
-  height: 1100px;
+  height: auto;
  
 
 
@@ -124,23 +129,25 @@ html, body{
   color:#80c0ff18;
 }
 
+.txt-escritorio p{
+  font-size: 1.2em;
+}
+
 .box-card{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
   gap: 50px;
   width: 80%;
+  margin: auto;
 
   
 
 }
 .box-card p{
-  line-height: 1.7em;
+
   text-align: justify;
   width: 100%;
   margin-top: 10px;
@@ -196,49 +203,26 @@ html, body{
 }
 
 .escritorio{
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: auto;
-  padding: 80px 0px 200px 0px;
-  justify-content: space-around;
-  align-items: center;
   background-image: url(../imagens/banner4.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  gap:50px;
-}
-
-
-.decoration-escritorio{
-  position: relative;
-  width: 400px;
-  height: 450px;
-  background-color: var(--cor4);
-  border-radius: 35px;
-}
-
-.ft-escritorio{
-  position: absolute;
-  left: 10%;
-  top: 10%;
-  width: 96%;
-  height: 96%;
-  background-image: url(../imagens/banner3.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 35px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.103);
-  
+  width: 100%;
 
 }
 
 .txt-escritorio{
-  width: 100%;
- 
+  width:80%;
+  margin: auto;
+
 }
+
+
+
+
+
+
+
 .btns{
   display:flex ;
 }
@@ -275,7 +259,7 @@ html, body{
     width: 85%;
     height: 450px;
    background-color: #ffffff;
-   line-height: 2em;
+
    
 }
 
@@ -368,7 +352,7 @@ html, body{
 
 .form input,
 .form textarea {
-  font: inherit;
+
   padding: 0.8rem;
   margin-bottom: 1rem;
   border: 1px solid var(--cor1);
@@ -395,7 +379,7 @@ html, body{
   padding: 1rem;
   background: var(--cor1);
   color: #fff;
-  font: inherit;
+  
   text-transform: uppercase;
   border: none;
   border-radius: 8px;

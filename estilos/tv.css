@@ -14,29 +14,24 @@
   margin-top: 30px;
 }
 
-.atuacoes{
-  height: 900px;
-
-}
 
 .card-atuacao{
-  width: 70%;
+  width: 100%;
   margin: 20px 0;
 }
 
 
-.box-card{
- 
-  align-items: baseline;
-  gap: 0px;
-  width: 82%;
- margin-left: 50px;
- 
- 
+.txt-escritorio{
+  padding: 100px 0;
 }
 
-.box-card p{
-  width: 100%;
+
+
+
+.box-card p, .txt-escritorio p{
+  width: 80%;
+  font-size: 1.2em;
+
 }
 
 
@@ -61,23 +56,6 @@
   margin: 0;
 }
 
-
-
-.escritorio{
-  flex-direction: row;
-  gap: 0px;
-  background-attachment: fixed;
-
-}
-
-.decoration-escritorio{
-  width: 40%;
-
-}
-
-.txt-escritorio{
-  width: 50%;
-}
 
 
 
