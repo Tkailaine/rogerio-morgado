@@ -17,6 +17,11 @@
   --fonte-normal: Poppins, sans-serif;
 }
 /* Estilo global */
+html, body{
+  scroll-behavior: smooth;
+}
+
+
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #f4f4f4;
